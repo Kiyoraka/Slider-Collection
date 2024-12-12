@@ -2,40 +2,37 @@
 const menuItems = document.querySelectorAll('.menu-item');
 const pages = document.querySelectorAll('.page');
 const totalPhotos = document.getElementById('total-photos');
+const totalSliders = document.getElementById('total-sliders');
 
-// Initialize photo counter
+// Initialize counters
 let photoCount = 0;
+let sliderCount = 0;
 
-// Function to count files recursively in a directory
-async function countFiles(directory) {
-    try {
-        const files = await window.fs.readdir(directory);
-        let count = 0;
+// Function to count all images in the DOM
+function countImages() {
+    // Get all img elements across all sliders
+    const images = document.querySelectorAll('img');
+    return images.length;
+}
 
-        for (const file of files) {
-            const path = `${directory}/${file}`;
-            const stats = await window.fs.stat(path);
-
-            if (stats.isDirectory()) {
-                // If it's a directory, recursively count files inside
-                count += await countFiles(path);
-            } else {
-                // If it's a file, increment counter
-                count++;
-            }
-        }
-
-        return count;
-    } catch (error) {
-        console.error('Error counting files:', error);
-        return 0;
-    }
+// Function to count menu items excluding main
+function countSliders() {
+    const sliderItems = Array.from(menuItems).filter(item => 
+        item.getAttribute('data-page') !== 'main'
+    );
+    return sliderItems.length;
 }
 
 // Function to update photo count
-function updatePhotoCount(count) {
-    photoCount = count;
+function updatePhotoCount() {
+    photoCount = countImages();
     totalPhotos.textContent = photoCount;
+}
+
+// Function to update slider count
+function updateSliderCount() {
+    sliderCount = countSliders();
+    totalSliders.textContent = sliderCount;
 }
 
 // Navigation functionality
@@ -52,11 +49,12 @@ menuItems.forEach(item => {
     });
 });
 
-// Initialize file count
-async function initializeFileCount() {
-    const count = await countFiles('assets');
-    updatePhotoCount(count);
+// Initialize counters
+function initializeCounts() {
+    updatePhotoCount();
+    updateSliderCount();
 }
 
 // Start the counting process when the page loads
-initializeFileCount();
+// Wait for all images to load before counting
+window.addEventListener('load', initializeCounts);
