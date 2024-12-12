@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glass Dashboard</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="asset/css/styles.css">
+    <link rel="stylesheet" href="asset/css/slider-1.css">
 </head>
 <body>
     <div class="container">
@@ -12,9 +13,9 @@
         <nav class="sidebar">
             <div class="sidebar-content">
                 <div class="menu-item active" data-page="main">Main</div>
-                <div class="menu-item" data-page="slider1">HTML Image Slider</div>
-                <div class="menu-item" data-page="slider2">Javascript Slider V1</div>
-                <div class="menu-item" data-page="slider3">Javascript Slider V2</div>
+                <div class="menu-item" data-page="slider1">HTML Normal Slider</div>
+                <div class="menu-item" data-page="slider2">Slider Sample 2</div>
+                <div class="menu-item" data-page="slider3">Slider Sample 3</div>
             </div>
         </nav>
 
@@ -37,7 +38,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="page" id="slider1">Slider Sample 1 Content</div>
+                    <div class="page" id="slider1">
+                        <div class="slider-container">
+                            <div class="slider">
+                                <div class="slide">
+                                    <img src="asset/img/slider-1/Design-1.png" alt="Sample UI Design V1">
+                                </div>
+                                <div class="slide">
+                                    <img src="asset/img/slider-1/Design-2.png" alt="Sample UI Design V2">
+                                </div>
+                                <div class="slide">
+                                    <img src="asset/img/slider-1/Design-3.png" alt="Sample UI Design V3">
+                                </div>
+                            </div>
+                            <div class="slider-buttons">
+                                <button class="slider-button prev">←</button>
+                                <button class="slider-button next">→</button>
+                            </div>
+                        </div>
+                    </div>
                     <div class="page" id="slider2">Slider Sample 2 Content</div>
                     <div class="page" id="slider3">Slider Sample 3 Content</div>
                 </div>
@@ -47,6 +66,7 @@
             </div>
         </main>
     </div>
-    <script src="assets/js/script.js"></script>
+    <script src="asset/js/script.js"></script>
+    <script src="asset/js/slider-1.js"></script>
 </body>
 </html>
