@@ -12,29 +12,39 @@
         <nav class="sidebar">
             <div class="sidebar-content">
                 <div class="menu-item active" data-page="main">Main</div>
-                <div class="menu-item" data-page="slider1">Slider Sample 1</div>
-                <div class="menu-item" data-page="slider2">Slider Sample 2</div>
-                <div class="menu-item" data-page="slider3">Slider Sample 3</div>
+                <div class="menu-item" data-page="slider1">HTML Image Slider</div>
+                <div class="menu-item" data-page="slider2">Javascript Slider V1</div>
+                <div class="menu-item" data-page="slider3">Javascript Slider V2</div>
             </div>
         </nav>
 
         <!-- Main Content -->
         <main class="main-content">
-            <div class="page active" id="main">
-                <div class="stats-container">
-                    <div class="stat-box">
-                        <h3>Total Photos</h3>
-                        <div class="stat-value" id="total-photos">0</div>
+            <div class="content-wrapper">
+                <div class="main-inner">
+                    <div class="title-box">
+                        <h1>The Image Slider Collection</h1>
                     </div>
-                    <div class="stat-box">
-                        <h3>Total Slider Samples</h3>
-                        <div class="stat-value" id="total-sliders">3</div>
+                    <div class="page active" id="main">
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <h3>Total Photos</h3>
+                                <div class="stat-value" id="total-photos">0</div>
+                            </div>
+                            <div class="stat-box">
+                                <h3>Total Slider Samples</h3>
+                                <div class="stat-value" id="total-sliders">3</div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="page" id="slider1">Slider Sample 1 Content</div>
+                    <div class="page" id="slider2">Slider Sample 2 Content</div>
+                    <div class="page" id="slider3">Slider Sample 3 Content</div>
+                </div>
+                <div class="footer-box">
+                    <p>&copy; 2024 Image Slider Collection. All Rights Reserved.</p>
                 </div>
             </div>
-            <div class="page" id="slider1">Slider Sample 1 Content</div>
-            <div class="page" id="slider2">Slider Sample 2 Content</div>
-            <div class="page" id="slider3">Slider Sample 3 Content</div>
         </main>
     </div>
     <script src="assets/js/script.js"></script>
