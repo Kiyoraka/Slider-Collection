@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Dashboard</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-content">
+                <div class="menu-item active" data-page="main">Main</div>
+                <div class="menu-item" data-page="slider1">Slider Sample 1</div>
+                <div class="menu-item" data-page="slider2">Slider Sample 2</div>
+                <div class="menu-item" data-page="slider3">Slider Sample 3</div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page active" id="main">
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <h3>Total Photos</h3>
+                        <div class="stat-value" id="total-photos">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <h3>Total Slider Samples</h3>
+                        <div class="stat-value" id="total-sliders">3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="page" id="slider1">Slider Sample 1 Content</div>
+            <div class="page" id="slider2">Slider Sample 2 Content</div>
+            <div class="page" id="slider3">Slider Sample 3 Content</div>
+        </main>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
